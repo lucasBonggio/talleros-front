@@ -1,0 +1,232 @@
+.pagina-login {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+@media (max-width: 900px) {
+    .pagina-login {
+        grid-template-columns: 1fr;
+    }
+    .pagina-login__panel-izquierdo {
+        display: none;
+    }
+}
+
+
+.pagina-login__panel-izquierdo {
+    background: #0f172a;
+    color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pagina-login__marca {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pagina-login__marca-icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    background: #2563eb;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.pagina-login__marca-nombre {
+    font-weight: 700;
+    font-size: 15px;
+    margin: 0;
+}
+
+.pagina-login__marca-subtitulo {
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    color: var(--color-text-secundario);
+    margin: 0;
+}
+
+.pagina-login__hero {
+    max-width: 420px;
+}
+
+.pagina-login__titulo {
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 0 16px;
+    color: var(--color-text-secundario);
+}
+
+.pagina-login__descripcion {
+    font-size: 14px;
+    color: var(--color-text-secundario);
+    margin: 0 0 24px;
+}
+
+.pagina-login__caracteristicas {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.caracteristica {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: #cbd5e1;
+}
+
+.caracteristica__icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background: #1e293b;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.pagina-login__version {
+    font-size: 11px;
+    color: #475569;
+    font-family: monospace;
+}
+
+.pagina-login__panel-derecho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f1f5f9;
+    padding: 40px;
+}
+
+.tarjeta-login {
+    width: 100%;
+    max-width: 360px;
+}
+
+.tarjeta-login__icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: #2563eb;
+    color: white;
+    border-radius: 10px;
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+.tarjeta-login__titulo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 4px;
+}
+
+.tarjeta-login__subtitulo {
+    font-size: 13px;
+    color: #64748b;
+    margin: 0 0 24px;
+}
+
+.tarjeta-login__form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.campo__label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #64748b;
+    margin-bottom: 6px;
+}
+
+.campo__input {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.campo__input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.campo__input-con-icono {
+    position: relative;
+}
+
+.campo__input-con-icono .campo__input {
+    padding-right: 40px;
+}
+
+.campo__boton-ojo {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.boton-ingresar {
+    width: 100%;
+    padding: 12px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    transition: background 0.15s ease, opacity 0.15s ease;
+}
+
+.boton-ingresar:hover:not(:disabled) {
+    background: #1d4ed8;
+}
+
+.boton-ingresar:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.tarjeta-login__error {
+    color: #dc2626;
+    font-size: 13px;
+    margin: 0;
+}
+
+.tarjeta-login__ayuda {
+    text-align: center;
+    font-size: 12px;
+    color: #64748b;
+    margin-top: 20px;
+}

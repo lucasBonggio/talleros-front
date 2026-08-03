@@ -1,0 +1,28 @@
+.formulario-reparacion{
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+}
+
+.formulario-reparacion .campo{
+    margin:0;
+}
+
+.formulario-reparacion .campo__label{
+    margin-bottom:.45rem;
+}
+
+.formulario-reparacion .campo__textarea{
+    min-height:90px;
+    resize:vertical;
+}
+
+.formulario-reparacion input[type="number"]::-webkit-inner-spin-button,
+.formulario-reparacion input[type="number"]::-webkit-outer-spin-button{
+    appearance:none;
+    margin:0;
+}
+
+.formulario-reparacion input[type="number"]{
+    appearance:textfield;
+}
