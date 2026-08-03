@@ -1,0 +1,413 @@
+.pagina-metricas{
+    display:flex;
+    flex-direction:column;
+    gap:28px;
+    padding:12px;
+}
+
+.pagina-metricas__header{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+}
+
+.pagina-metricas__titulo{
+    margin:0;
+    font-size:2rem;
+    font-weight:700;
+    color:#111827;
+}
+
+.pagina-metricas__subtitulo{
+    margin:0;
+    font-size:.95rem;
+    color:#6b7280;
+}
+
+.pagina-metricas__grilla{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+}
+
+.estadistica{
+
+    background:#ffffff;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:18px;
+
+    padding:22px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    min-height:135px;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+
+    box-shadow:
+        0 4px 14px rgba(15,23,42,.05);
+}
+
+.estadistica:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 14px 28px rgba(15,23,42,.10);
+
+}
+
+.estadistica__icono-wrap{
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:12px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:18px;
+
+}
+
+.estadistica__icono{
+
+    font-size:20px;
+
+}
+
+
+.estadistica--azul{
+
+    background:#dbeafe;
+
+    color:#2563eb;
+
+}
+
+.estadistica--verde{
+
+    background:#dcfce7;
+
+    color:#16a34a;
+
+}
+
+.estadistica--naranja{
+
+    background:#ffedd5;
+
+    color:#ea580c;
+
+}
+
+.estadistica--rojo{
+
+    background:#fee2e2;
+
+    color:#dc2626;
+
+}
+
+
+.estadistica__valor{
+
+    margin:0;
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    color:#111827;
+
+}
+
+
+.estadistica__nombre{
+
+    margin-top:8px;
+
+    color:#6b7280;
+
+    font-size:.95rem;
+
+}
+
+
+.pagina-metricas__grilla-graficos{
+
+    display:grid;
+
+    grid-template-columns:
+        1fr
+        1.2fr
+        1fr;
+
+    gap:22px;
+
+}
+
+
+/* panel */
+
+.panel-metrica{
+
+    background:white;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:18px;
+
+    padding:24px;
+
+    box-shadow:
+        0 4px 14px rgba(15,23,42,.05);
+
+    transition:
+        transform .25s,
+        box-shadow .25s;
+
+}
+
+.panel-metrica:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 14px 28px rgba(15,23,42,.10);
+
+}
+
+.panel-metrica__titulo{
+
+    margin:0 0 22px;
+
+    font-size:.78rem;
+
+    font-weight:700;
+
+    color:#6b7280;
+
+    letter-spacing:.12em;
+
+    text-transform:uppercase;
+
+}
+
+.grafico-donut__wrap{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-bottom:22px;
+
+}
+
+.grafico-donut__leyenda{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.leyenda-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:.9rem;
+
+}
+
+.leyenda-item__punto{
+
+    width:11px;
+
+    height:11px;
+
+    border-radius:50%;
+
+}
+
+.leyenda-item__etiqueta{
+
+    flex:1;
+
+    color:#4b5563;
+
+}
+
+.leyenda-item__valor{
+
+    font-weight:700;
+
+    color:#111827;
+
+}
+
+.marcas-frecuentes__lista{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.marca-item__fila{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:8px;
+
+}
+
+.marca-item__nombre{
+
+    font-weight:500;
+
+    color:#111827;
+
+}
+
+.marca-item__valor{
+
+    color:#6b7280;
+
+}
+
+.marca-item__barra-fondo{
+
+    height:8px;
+
+    background:#e5e7eb;
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+}
+
+.marca-item__barra-relleno{
+
+    height:100%;
+
+    border-radius:999px;
+
+    background:#2563eb;
+
+    transition:width .4s;
+
+}
+
+
+.marcas-frecuentes__clientes{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    margin-top:24px;
+
+    padding-top:20px;
+
+    border-top:1px solid #eceff3;
+
+}
+
+.marcas-frecuentes__icono-wrap{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:12px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#eef2ff;
+
+}
+
+.marcas-frecuentes__label{
+
+    margin:0;
+
+    color:#6b7280;
+
+    font-size:.82rem;
+
+}
+
+.marcas-frecuentes__valor{
+
+    margin-top:4px;
+
+    font-size:1.4rem;
+
+    font-weight:700;
+
+    color:#111827;
+
+}
+
+.pagina-metricas__error{
+
+    color:#dc2626;
+
+}
+
+@media(max-width:1200px){
+
+    .pagina-metricas__grilla{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .pagina-metricas__grilla-graficos{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:700px){
+
+    .pagina-metricas__grilla{
+
+        grid-template-columns:1fr;
+
+    }
+
+}

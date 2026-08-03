@@ -1,0 +1,19 @@
+.pagina-principal{
+    display:flex;
+    min-height:100vh;
+    background:#f5f7fb;
+    height: 100vh;
+    overflow: hidden; 
+}
+
+.pagina-principal__sidebar{
+    width:230px;
+    flex-shrink:0;
+    height: 100%; 
+}
+
+.pagina-principal__contenido{
+    flex:1;
+    padding:32px;
+    overflow-y:auto;
+}
