@@ -1,21 +1,89 @@
-<<<<<<< HEAD
-# talleros-front
-Sistema de gestión de servicios de reparación de televisores. 
-=======
-# React + Vite
+# TallerOS — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Interfaz web para el sistema de gestión de órdenes de reparación TallerOS. Consume la API REST del backend y permite al equipo del taller gestionar el ciclo de vida completo de cada reparación.
 
-Currently, two official plugins are available:
+[![Demo](https://img.shields.io/badge/demo-online-brightgreen)](https://demo-talleros.vercel.app)
+[![Backend](https://img.shields.io/badge/backend-repositorio-lightgrey)](https://github.com/tu-usuario/talleros-backend)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Demo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**https://demo-talleros.vercel.app**
 
-## Expanding the Oxlint configuration
+```
+Usuario: admin
+Contraseña: admin123
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
->>>>>>> origin/master
+> La demo consume el backend deployado en Render free tier. Si no responde de inmediato, esperá unos segundos a que despierte.
+
+---
+
+## Stack
+
+| Tecnología | Uso |
+|---|---|
+| React | Framework principal |
+| React Context API | Gestión del estado de autenticación global |
+| Lucide React | Iconografía |
+| Axios | Comunicación con el backend |
+
+---
+
+## Funcionalidades
+
+- Autenticación con JWT — login, manejo de sesión y protección de rutas. El estado del usuario autenticado se comparte globalmente mediante Context API, evitando prop drilling entre componentes.
+- Listado de órdenes activas con filtros por estado.
+- Registro de nuevas órdenes con búsqueda de cliente existente por teléfono o nombre.
+- Transiciones de estado mediante acciones directas (iniciar reparación, marcar lista, entregar, cancelar).
+- Dashboard con resumen del estado actual del taller y órdenes demoradas.
+
+---
+
+## Correr el proyecto localmente
+
+### Requisitos
+
+- Node.js 18+
+
+### Pasos
+
+```bash
+# Clonar el repositorio
+git clone https://github.com/lucasBonggio/talleros-front.git
+cd talleros-front
+
+# Instalar dependencias
+npm install
+
+# Configurar la URL del backend
+# Crear un archivo .env en la raíz con:
+VITE_BACKEND_URL=http://localhost:8080
+
+# Correr en modo desarrollo
+npm start
+```
+
+La aplicación levanta en `http://localhost:3000` y espera el backend en el puerto 8080.
+
+### Para apuntar a la demo del backend
+
+```
+VITE_BACKEND_URL=https://talleros-back-end.onrender.com
+```
+
+---
+
+## Repositorio relacionado
+
+El backend (Spring Boot + PostgreSQL) está en un repositorio separado e incluye la documentación completa de la API en formato OpenAPI:
+
+**https://github.com/lucasBonggio/talleros-back-end.git**
+
+---
+
+## Autor
+
+**Lucas** — Estudiante de Tecnicatura en Desarrollo de Software  
+Frontend: React · REST APIs · JWT
